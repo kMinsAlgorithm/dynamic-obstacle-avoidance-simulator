@@ -1,0 +1,1219 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='ped10'>
+      <pose>8.466 6.58179 0 0 -0 0</pose>
+      <link name='Wall_0'>
+        <collision name='Wall_0_Collision'>
+          <geometry>
+            <box>
+              <size>27.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_0_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>27.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>0 -11.425 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_2'>
+        <collision name='Wall_2_Collision'>
+          <geometry>
+            <box>
+              <size>23 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_2_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>23 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-13.8 -0 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_3'>
+        <collision name='Wall_3_Collision'>
+          <geometry>
+            <box>
+              <size>27.5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_3_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>27.5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-0.125 11.425 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_4'>
+        <collision name='Wall_4_Collision'>
+          <geometry>
+            <box>
+              <size>23 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_4_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>23 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>13.55 -0 0 0 -0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='unit_box'>
+      <pose>3.03778 3.96322 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='unit_box_clone'>
+      <pose>8.28459 9.35687 0.895455 -0.001776 3e-06 0.001652</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 6.75561 1.8029</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 6.75561 1.8029</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='unit_cylinder'>
+      <pose>-1.82976 12.4221 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.145833</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.145833</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.999996</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.999996</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='unit_box_0'>
+      <pose>2.11682 6.73785 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='unit_box_clone_0'>
+      <pose>15.8909 0.251888 0.895455 0.001776 -3e-06 0.001656</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 6.75561 1.8029</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 6.75561 1.8029</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='unit_box_1'>
+      <pose>21.77 11.4831 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='unit_box_2'>
+      <pose>11.4783 16.5951 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <state world_name='default'>
+      <sim_time>275 779000000</sim_time>
+      <real_time>41 757996797</real_time>
+      <wall_time>1739641045 734488415</wall_time>
+      <iterations>41670</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ped10'>
+        <pose>10.1036 6.46271 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_0'>
+          <pose>10.1036 -4.96229 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_2'>
+          <pose>-3.69642 6.46271 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_3'>
+          <pose>9.97858 17.8877 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_4'>
+          <pose>23.6536 6.46271 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='td_robot'>
+        <pose>-0.001305 0.000301 3e-06 0 -0.007169 -0.00066</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>-0.001305 0.000301 3e-06 0 -0.007169 -0.00066</pose>
+          <velocity>-3e-05 7e-06 0.004881 -3e-06 -5.7e-05 -1e-05</velocity>
+          <acceleration>-0.002832 0.00106 9.75896 -0.005322 -0.114678 0.000157</acceleration>
+          <wrench>-0.037779 0.014143 130.185 0 -0 0</wrench>
+        </link>
+        <link name='center_wheel'>
+          <pose>-0.212567 -0.000375 0.037502 -0.000225 -0.031391 0.030711</pose>
+          <velocity>-2.5e-05 -3e-06 0.007337 7.1e-05 -0.000639 0.000569</velocity>
+          <acceleration>0.013306 0.0065 14.6742 0.111401 0.003712 -0.003508</acceleration>
+          <wrench>0.001464 0.000715 1.61416 0 -0 0</wrench>
+        </link>
+        <link name='left_hub'>
+          <pose>-0.002049 -0.149698 0.09 0 -0.009165 -0.00066</pose>
+          <velocity>-1.4e-05 -1e-06 0.004751 1e-05 -0.000157 -1e-05</velocity>
+          <acceleration>0.037948 -0.015865 9.502 0.020116 -0.214725 -0.000747</acceleration>
+          <wrench>0.019354 -0.008091 4.84602 0 -0 0</wrench>
+        </link>
+        <link name='right_hub'>
+          <pose>-0.001851 0.150302 0.09 0 -0.008996 -0.00066</pose>
+          <velocity>-1.4e-05 0 0.004766 -1e-06 -0.000152 -1.1e-05</velocity>
+          <acceleration>0.032878 -0.013951 9.5329 -0.001119 -0.209439 -0.001895</acceleration>
+          <wrench>0.016768 -0.007115 4.86178 0 -0 0</wrench>
+        </link>
+        <link name='swivel'>
+          <pose>-0.186694 0.000424 0.053683 -0.000225 -0.007163 0.030705</pose>
+          <velocity>-3.1e-05 1.1e-05 0.006398 3.2e-05 0.000346 0.00057</velocity>
+          <acceleration>0.001926 0.003468 12.7953 0.071674 0.691365 0.000113</acceleration>
+          <wrench>0.000193 0.000347 1.27953 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box'>
+        <pose>3.07789 -0.994987 0.895452 -0.001776 3e-06 0.001656</pose>
+        <scale>1 6.75561 1.80289</scale>
+        <link name='link'>
+          <pose>3.07789 -0.994987 0.895452 -0.001776 3e-06 0.001656</pose>
+          <velocity>-0 0.003148 -0.234941 -0.072581 -1e-06 0</velocity>
+          <acceleration>-0.000297 9.8 0 -0.649493 -0.002475 0</acceleration>
+          <wrench>-0.000297 9.8 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_0'>
+        <pose>2.11682 6.73785 0.499995 0 1e-05 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.11682 6.73785 0.499995 0 1e-05 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.010615 -0.006191 -9.78231 0.012424 0.021225 1.8e-05</acceleration>
+          <wrench>0.010615 -0.006191 -9.78231 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_1'>
+        <pose>21.77 11.4831 0.499995 0 1e-05 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>21.77 11.4831 0.499995 0 1e-05 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.010615 -0.006191 -9.78231 0.012424 0.021225 1.8e-05</acceleration>
+          <wrench>0.010615 -0.006191 -9.78231 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_2'>
+        <pose>11.4783 16.5951 0.499995 -1e-05 -0 -0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>11.4783 16.5951 0.499995 -1e-05 -0 -0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.004709 0.011055 -9.78158 -0.022108 0.009414 1e-06</acceleration>
+          <wrench>0.004709 0.011055 -9.78158 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_clone'>
+        <pose>9.77016 11.3992 0.901467 0 -3.4e-05 1.27774</pose>
+        <scale>1 0.885206 1</scale>
+        <link name='link'>
+          <pose>9.77016 11.3992 0.901467 0 -3.4e-05 1.27774</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.109686 1.14012 -7.7703 -0.419845 -0.157802 0.082175</acceleration>
+          <wrench>-0.109686 1.14012 -7.7703 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_clone_0'>
+        <pose>13.1581 3.42703 0.900314 0.000469 -0 1.57034</pose>
+        <scale>1 0.716997 1</scale>
+        <link name='link'>
+          <pose>13.1581 3.42703 0.900314 0.000469 -0 1.57034</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>9.8 -0.000472 -0 0.004485 1.34455 0</acceleration>
+          <wrench>9.8 -0.000472 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_cylinder'>
+        <pose>-1.82977 12.4221 1.25733 0 0 -3.7e-05</pose>
+        <scale>1 1 2.51467</scale>
+        <link name='link'>
+          <pose>-1.82977 12.4221 1.25733 0 0 -3.7e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-16.3971 0.216345 15.1412 0 0.4978 -0.171855</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+       
+<actor name='person_1'>
+  <pose>-1.94 19.475 0 0 0 -1.57</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='1' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>-1.94 19.475 0 0 0 -1.57</pose>
+      </waypoint>
+      <waypoint>
+        <time>20</time>
+        <pose>-1.94 5.2 0 0 0 -1.57</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_2'>
+  <pose>0.144 19.179 0 0 0 -1.57</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='2' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>0.144 19.179 0 0 0 -1.57</pose>
+      </waypoint>
+      <waypoint>
+        <time>20</time>
+        <pose>0.144 5.2 0 0 0 -1.57</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_3'>
+  <pose>24.449 14.556 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='3' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>24.449 14.556 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>18</time>
+        <pose>3.366 14.556 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_4'>
+  <pose>24.876 7.3033 0 0 0 3.14</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='4' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>24.876 7.3033 0 0 0 3.14</pose>
+      </waypoint>
+      <waypoint>
+        <time>12</time>
+        <pose>6.94 7.28 0 0 0 3.14</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_5'>
+  <pose>24.876 6.3033 0 0 0 3.14</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='5' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>24.876 6.3033 0 0 0 3.14</pose>
+      </waypoint>
+      <waypoint>
+        <time>18</time>
+        <pose>6.94 6.28 0 0 0 3.14</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_6'>
+  <pose>24.876 2.3033 0 0 0 3.14</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='6' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>24.876 2.3033 0 0 0 3.14</pose>
+      </waypoint>
+         
+      <waypoint>
+        <time>18</time>
+        <pose>6.94 2.28 0 0 0 3.14</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_7'>
+  <pose>24.876 1.3033 0 0 0 3.14</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='7' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>24.876 1.3033 0 0 0 3.14</pose>
+      </waypoint>
+         
+      <waypoint>
+        <time>20</time>
+        <pose>6.94 1.28 0 0 0 3.14</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_8'>
+  <pose>7.77 -5.337 0 0 0 1.57</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='8' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>7.77 -5.337 0 0 0 1.57</pose>
+      </waypoint>
+      <waypoint>
+        <time>20</time>
+        <pose>7.77 5.337 0 0 0 1.57</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_9'>
+  <pose>6.77 -5.337 0 0 0 1.57</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='9' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>6.77 -5.337 0 0 0 1.57</pose>
+      </waypoint>
+      <waypoint>
+        <time>20</time>
+        <pose>6.77 5.337 0 0 0 1.57</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+
+<actor name='person_10'>
+  <pose>2.632 16.764 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='10' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>2.632 16.764 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>40</time>
+        <pose>3.132 16.764 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_11'>
+  <pose>4.95 15.948 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='11' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>4.95 15.948 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>40</time>
+        <pose>4.95 15.448 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_12'>
+  <pose>9.95 10.7 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='12' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>9.95 10.7 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>20</time>
+        <pose>4.45 3.7 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_13'>
+  <pose>12.59 -1.704 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='13' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>12.59 -1.704 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>40</time>
+        <pose>12.59 -1.204 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_14'>
+  <pose>20.78 11.964 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='14' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>19.78 11.964 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>35</time>
+        <pose>20.28 2.964 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_15'>
+  <pose>18.46 -3.309 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='15' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>18.46 -3.309 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>50</time>
+        <pose>18.46 -3.809 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+<actor name='person_16'>
+  <pose>13.78 11.964 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='16' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>13.78 11.964 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>14</time>
+        <pose>18.28 11.964 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+<actor name='person_18'>
+  <pose>6.55 11.7 0 0 0 0</pose>
+  <skin>
+    <filename>walk.dae</filename>
+  </skin>
+  <animation name='walking'>
+    <filename>walk.dae</filename>
+    <interpolate_x>1</interpolate_x>
+  </animation>
+  <script>
+    <loop>1</loop>
+    <trajectory id='12' type='walking' tension='0'>
+      <waypoint>
+        <time>0</time>
+        <pose>6.55 10.7 0 0 0 0</pose>
+      </waypoint>
+      <waypoint>
+        <time>30</time>
+        <pose>3.45 4.7 0 0 0 0</pose>
+      </waypoint>
+    </trajectory>
+  </script>
+</actor>
+
+  </world>
+</sdf>
