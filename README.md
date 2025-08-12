@@ -1,6 +1,6 @@
 # Dynamic obstacle avoidance simulator
 
-This simulation environment was used for training and testing in my research.
+This simulation environment was used for training and testing in [my research](https://kminsalgorithm.github.io/HADP.html).
 
 It requires the [gazebo_sfm_plugin](https://github.com/robotics-upo/gazebo_sfm_plugin) to run.  
 
